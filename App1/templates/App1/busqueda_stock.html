@@ -1,0 +1,22 @@
+{% extends "App1/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+Acá podes buscar por nombre de modelo nuestro stock propio
+{% endblock %}
+
+{%block texto%}
+<form action="/App1/resultados_stock" method="GET">
+
+    <input type="text" name="modelo" id="modelo">
+
+    <input type="submit" value="Buscar">
+
+
+</form>
+
+{% endblock %}
+
+
