@@ -39,7 +39,7 @@ def cliente_formulario(request):
             
             info = formulario1.cleaned_data
             
-            cliente = Cliente_Formulario(nombre=info["nombre"],apellido=info["apellido"],email=info["email"],direccion=info["direccion"],localidad=info["localidad"],provincia=info["provincia"],pais=info["pais"])            
+            cliente = Cliente(nombre=info["nombre"],apellido=info["apellido"],email=info["email"],direccion=info["direccion"],localidad=info["localidad"],provincia=info["provincia"],pais=info["pais"])            
             
             cliente.save()
             return render(request,"App1/inicio.html")
@@ -59,7 +59,7 @@ def reparacion(request):
             
             info = formula1.cleaned_data
             
-            reparacion = Reparacion_Formulario(nombre=info["modelo"],efecto=info["efecto"],fabricante=info["fabricante"],volts=info["volts"],origen=info["origen"],cliente=info["cliente"],presupuesto=info["presupuesto"],envio=info["envio"])            
+            reparacion = PedalReparar(nombre=info["modelo"],efecto=info["efecto"],fabricante=info["fabricante"],volts=info["volts"],origen=info["origen"],cliente=info["cliente"],presupuesto=info["presupuesto"],envio=info["envio"])            
             reparacion.save()
             return render(request,"App1/inicio.html")
     else:
